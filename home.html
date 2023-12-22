@@ -1,0 +1,69 @@
+
+<div hx-get="/partials/banner.html" hx-trigger="load"></div>
+
+<section class="bg-white" x-data="{ show: false }">
+    <div class="px-8 py-12 max-w-[768px] m-auto" x-intersect:leave="show = false"  x-intersect:enter="show = true" >
+        <img x-show="show"
+             x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 scale-50"
+             x-transition:enter-end="opacity-100 scale-100"
+             x-transition:leave="transition ease-in duration-300"
+             x-transition:leave-start="opacity-100 scale-100"
+             x-transition:leave-end="opacity-0 scale-50" src="images/flat_illustration_breaking_down_account_management_o_8cd7c17f-3b5e-45f5-a42b-44066c55575e.png" />
+        <p class="py-8 flex gap-6">
+            <span x-show="show"
+                  x-transition:enter="transition ease-out delay-700 duration-300"
+                  x-transition:enter-start="opacity-0 -translate-x-12"
+                  x-transition:enter-end="opacity-100 translate-x-0"
+                  x-transition:leave="transition ease-in duration-300"
+                  x-transition:leave-start="opacity-100 translate-x-0"
+                  x-transition:leave-end="opacity-0 -translate-x-12" class="text-2xl font-bold block">We are reimagining social technology to put <span class="italic text-sky-600">control back</span> into the hands of users</span>
+            <span x-show="show"
+                  x-transition:enter="transition ease-out delay-700 duration-300"
+                  x-transition:enter-start="opacity-0 translate-x-12"
+                  x-transition:enter-end="opacity-100 translate-x-0"
+                  x-transition:leave="transition ease-in duration-300"
+                  x-transition:leave-start="opacity-100 translate-x-0"
+                  x-transition:leave-end="opacity-0 translate-x-12" class="text-lg text-gray-600">Our platform is designed to provide transparency, ensure content integrity, foster meaningful connections, and enable equitable compensation.</span>
+        </p>
+    </div>
+</section>
+
+<section class="bg-gray-50">
+
+    <div class="flex px-8 py-12 justify-between items-center max-w-[960px] m-auto gap-4">
+
+        <div class="rounded-full border-8 border-yellow-500 overflow-hidden">
+            <img class="object-cover aspect-square w-[400px]" src="images/digital_painting_a_group_of_young_professionals_dive_ad1e12a5-8c45-47d6-b665-560e376fb41f.png" />
+        </div>
+
+        <div>
+            <h4 class="text-yellow-500 text-3xl font-bold">User-Centric Design</h4>
+            <p>Our interface and algorithms are built to serve user needs - not exploit them. We enable authentic connections without manipulating recommendations or compromising privacy.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<div>
+
+The Digitalage Difference:
+User-Centric Design: Our interface and algorithms are built to serve user needs - not exploit them. We enable authentic connections without manipulating recommendations or compromising privacy.
+Creator Economy: We offer creators unmatched opportunities to monetize content while retaining rights. Our fair compensation models empower sustainable creator careers.
+Decentralized Architecture: Our decentralized platform powered by blockchain ensures security, transparency and gives users control over their data.
+Content Authenticity: We leverage advanced analytics to authenticate content, counter disinformation, and promote accurate information across the platform.
+Join the Digitalage Community:
+We invite creators, consumers, partners and investors to help us reinvent social media technology for good. Sign up today to receive updates and early access.
+Call to Action Button: Join Digitalage Now
+By building an ethical platform focused on transparency and putting principles first, Digitalage aims to restore trust in social systems and online communities. The future starts now - join us.
+</div>
+
+<img src="images/digital_painting_a_group_of_young_professionals_dive_ad1e12a5-8c45-47d6-b665-560e376fb41f.png" />
+<img src="images/illustration_floating_interface_screens_people_inter_5da1c4c5-4e9b-42df-9cce-eaa6e4469c54.png" />
+<img src="images/network_interconnected_pieces_authentic_verified_con_ac462519-f3f7-4d2a-b3db-db60ed4fb060.png" />
+<img src="images/illustration_creators_conceptualizing_ideas_on_devic_76ac6f73-b25e-4826-9441-6660f8f54d06.png" />
+
+</body>
+</html>

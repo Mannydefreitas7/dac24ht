@@ -1,0 +1,4 @@
+{
+  "watch": ["layouts/*", "partials/*"],
+  "ext": "hbs, css, js"
+}
