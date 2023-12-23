@@ -1,51 +1,71 @@
+<div x-data="{ links: [
+    {
+        name: 'Features',
+        url: '/features.html',
+    },
+    {
+        name: 'Investors',
+        url: '/investors.html',
+    },
+    {
+        name: 'About',
+        url: '/about.html',
+    },
+    {
+        name: 'Contact',
+        url: '/contact.html',
+    }
+] }">
+    <header class="absolute top-0 w-full z-50">
 
-<header class="absolute top-0 w-full z-50">
+        <nav hx-boost="true" class="flex items-center justify-between p-2 lg:px-6" aria-label="Global">
+            <a href="/index.html"  hx-target="#root" class="-m-1.5 p-1.5 md:grow-0">
+                <span class="sr-only">Digitalage</span>
+                <img class="h-12 w-auto" src="/logo/DAlogoLOCKUP_R_clear_light.png" alt="">
+            </a>
 
-    <nav class="flex items-center justify-between p-2 lg:px-6" aria-label="Global">
-        <a hx-get="/home.html"  hx-target="#root" class="-m-1.5 p-1.5 md:grow-0">
-            <span class="sr-only">Digitalage</span>
-            <img class="h-12 w-auto" src="/logo/DAlogoLOCKUP_R_clear_light.png" alt="">
-        </a>
+            <ul  class="hidden md:flex md:justify-center md:grow md:gap-x-12 text-white text-sm">
+                <template x-for="(link, index) in links" :key="index">
+                    <li><a :href="link.url" hx-target="#root"  x-text="link.name"></a></li>
 
-        <ul class="hidden md:flex md:justify-center md:grow md:gap-x-12 text-white text-sm">
-            <li><a>Feature</a></li>
-            <li><a>Investors</a></li>
-            <li><a hx-get="/about.html"  hx-target="#root">About</a></li>
-            <li><a>Contact</a></li>
-        </ul>
+                </template>
 
-        <div class="hidden md:flex md:grow-0 text-white md:justify-end">
-            <a href="#" class="text-sm font-semibold leading-6">Log in <span aria-hidden="true">&rarr;</span></a>
-        </div>
-    </nav>
+            </ul>
 
-</header>
+            <div class="hidden md:flex md:grow-0 text-white md:justify-end">
+                <a href="#" class="text-sm font-semibold leading-6">Log in <span aria-hidden="true">&rarr;</span></a>
+            </div>
+        </nav>
 
-<header x-show="hasBackground"
-        x-transition:enter="transition ease-out duration-300"
-        x-transition:enter-start="opacity-0 -translate-y-full"
-        x-transition:enter-end="opacity-100 translate-y-0"
-        x-transition:leave="transition ease-in duration-300"
-        x-transition:leave-start="opacity-100 translate-y-0"
-        x-transition:leave-end="opacity-0 -translate-y-full"
-        class="bg-slate-900/30 backdrop-blur-md border-b border-slate-400/20 fixed top-0 w-full z-50">
+    </header>
 
-    <nav class="flex items-center justify-between p-2 lg:px-6" aria-label="Global">
-        <a href="#" class="-m-1.5 p-1.5 md:grow-0">
-            <span class="sr-only">Digitalage</span>
-            <img class="h-12 w-auto" src="/logo/DAlogoLOCKUP_R_clear_light.png" alt="">
-        </a>
+    <header x-show="hasBackground"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 -translate-y-full"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-full"
+            class="bg-slate-900/30 backdrop-blur-md border-b border-slate-400/20 fixed top-0 w-full z-50">
 
-        <ul class="hidden md:flex md:justify-center md:grow md:gap-x-12 text-white text-sm">
-            <li><a>Feature</a></li>
-            <li><a>Investors</a></li>
-            <li><a>About</a></li>
-            <li><a>Contact</a></li>
-        </ul>
+        <nav hx-boost="true" class="flex items-center justify-between p-2 lg:px-6" aria-label="Global">
+            <a href="/home.html" hx-target="#root" class="-m-1.5 p-1.5 md:grow-0">
+                <span class="sr-only">Digitalage</span>
+                <img class="h-12 w-auto" src="/logo/DAlogoLOCKUP_R_clear_light.png" alt="">
+            </a>
 
-        <div class="hidden md:flex md:grow-0 text-white md:justify-end">
-            <a href="#" class="text-sm font-semibold leading-6">Log in <span aria-hidden="true">&rarr;</span></a>
-        </div>
-    </nav>
+            <ul class="hidden md:flex md:justify-center md:grow md:gap-x-12 text-white text-sm">
+                <template x-for="(link, index) in links" :key="index">
+                    <li><a :href="link.url" hx-target="#root" x-text="link.name"></a></li>
 
-</header>
+                </template>
+            </ul>
+
+            <div class="hidden md:flex md:grow-0 text-white md:justify-end">
+                <a href="#" class="text-sm font-semibold leading-6">Log in <span aria-hidden="true">&rarr;</span></a>
+            </div>
+        </nav>
+
+    </header>
+
+</div>
