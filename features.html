@@ -1,37 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Digitalage | Features</title>
 
-<pre>
-    Unleash Your Potential on Digitalage
-At Digitalage, we built an empowering platform for creators by creators. One where you retain ownership, receive fair compensation, and make meaningful connections with fans. Leave limitations behind - and unlock transformative success on Digitalage.
-Creator Opportunities
-* Earn equitable revenue shares: Keep up to 95% of earnings from your content and subscriber base.
-* Expand reach exponentially: Leverage powerful platform tools to expand your audience globally.
-* Maintain full ownership: You retain all IP rights and creative control over your digital content and presence.
-* Access transparent analytics: Our intuitive dashboards and insights tools help inform your strategy.
-* Forge authentic connections: Engage fans, collaborators and other creators in a positive environment optimized for mutual growth.
-What Digitalage Offers You
-All-in-One Content Toolkit
-Our integrated creation tools - from editing to effects, publishing to analytics - help streamline your workflow.
-Subscription Services & Commerce
-Monetize content, offer exclusive access, and sell merchandise seamlessly. Memberships are frictionless for fans globally.
-Sustainable Career Building
-Thrive long-term with our accelerated Network Program for ambitious creators invested in digital content careers.
-Join the Community
-Ready to elevate your creator journey? Become part of Digitalage today. We can’t wait for you to experience social media on your own terms.
-Action Button: Start Creating
-</pre>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/icons/site.webmanifest" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="shortcut icon" href="/icons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#ffc40d" />
+    <meta name="msapplication-TileImage" content="/icons/mstile-144x144.png" />
+    <meta name="msapplication-config" content="/icons/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<img src="images/digital_illustration_diverse_creators_collaborating__73427cfe-0425-4982-bad2-9b864c4c9356.png" />
-<img src="images/animated_illustration_coins_and_cash_growing_from_di_6e1161af-86bf-47e9-910f-4321a26dd8f1.png" />
-<img src="images/illustration_creator_smiles_looking_at_data_visualiz_42f41e9f-a650-4c5b-b0e4-f7e8ff627060.png" />
-<img src="images/illustrated_decentralized_network_creators_connectin_3a37faa2-310c-4f0f-8b69-88619be65050.png" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css"
+    />
 
+    <!--    <script src="https://cdn.tailwindcss.com"></script>-->
+    <script src="scripts/tailwind3.3.5.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"
+      integrity="sha256-yPqP9Fer3NIS83oH7y8pLJmQEd/6vKpXf7Hh4Adsplg="
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/htmx.org@1.9.9/dist/htmx.min.js"
+      integrity="sha256-lqM0qVcKOCz5xhofhtVYcLocZeFmzFvK6Y3djNq+uIY="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-gray-950">
+    <div
+      class="bg-white"
+      x-data="{ hasBackground: false, button: 'Start Creating', isDark: true, title: 'Features', image: 'images/illustrated_landscape_creators_communities_empowered_75756861-b4e8-4f39-acd7-4429037cfdac.png' }"
+    >
+      <!-- HEADER -->
+      <div hx-get="/partials/header.html" hx-trigger="load"></div>
+      <div hx-get="/partials/page-top.html" hx-trigger="load"></div>
 
-</body>
+      <div
+        class="w-full h-1"
+        x-intersect:leave.margin.-64px="isDark = false"
+        x-intersect:enter.margin.-64px="isDark = true"
+      ></div>
+
+      <section class="px-8 py-12 max-w-[768px] m-auto text-black/80">
+        <div class="md:flex gap-8 items-start">
+          <h4
+            class="text-4xl md:w-1/2 font-extrabold grow border-l-4 pl-8 border-sky-500"
+          >
+            Unleash Your Potential on Digitalage
+          </h4>
+          <p class="py-3 shrink md:w-1/2">
+            At Digitalage, we built an empowering platform for creators by
+            creators. One where you retain ownership, receive fair compensation,
+            and make meaningful connections with fans. Leave limitations behind
+            - and unlock transformative success on Digitalage.
+          </p>
+        </div>
+      </section>
+      <section class="py-12 bg-neutral-50">
+        <div class="max-w-[768px] px-8 m-auto">
+          <h4 class="text-center mb-8 text-4xl font-bold text-yellow-500">
+            Creator Opportunities
+          </h4>
+          <ul class="list-disc text-lg">
+            <li class="my-4 opacity-70">
+              <span class="font-bold block">Earn equitable revenue shares</span>
+              Keep up to 95% of earnings from your content and subscriber base.
+            </li>
+            <li class="my-4 opacity-70">
+              <span class="font-bold block">Expand reach exponentially</span>
+              Leverage powerful platform tools to expand your audience globally.
+            </li>
+            <li class="my-4 opacity-70">
+              <span class="font-bold block">Maintain full ownership</span> You
+              retain all IP rights and creative control over your digital
+              content and presence.
+            </li>
+            <li class="my-4 opacity-70">
+              <span class="font-bold block">Access transparent analytics</span>
+              Our intuitive dashboards and insights tools help inform your
+              strategy.
+            </li>
+            <li class="my-4 opacity-70">
+              <span class="font-bold block">Forge authentic connections</span>
+              Engage fans, collaborators and other creators in a positive
+              environment optimized for mutual growth.
+            </li>
+          </ul>
+          Join the Community Ready to elevate your creator journey? Become part
+          of Digitalage today. We can’t wait for you to experience social media
+          on your own terms. Action Button: Start Creating
+        </div>
+      </section>
+
+      <div
+        class="w-full h-1"
+        x-intersect:leave.margin.-64px="isDark = true"
+        x-intersect:enter.margin.-64px="isDark = false"
+      ></div>
+
+      <section class="bg-slate-900 py-12">
+        <div class="max-w-[768px] px-8 m-auto">
+          <h4 class="text-center mb-2 text-4xl font-bold text-white">
+            What Digitalage Offers You
+          </h4>
+          <p class="mb-12 text-center text-white/50">
+            We can’t wait for you to experience social media on your own terms
+          </p>
+          <div class="grid md:grid-cols-3 gap-4">
+            <div
+              class="cursor-pointer group border border-slate-700 transition ease-in-out delay-50 hover:bg-slate-900 backdrop-blur-md rounded overflow-hidden"
+            >
+              <div class="h-32">
+                <img
+                  src="images/digital_illustration_diverse_creators_collaborating__73427cfe-0425-4982-bad2-9b864c4c9356.png"
+                  class="object-cover aspect-square w-full h-full"
+                />
+              </div>
+
+              <div class="p-4">
+                <h6
+                  class="transition ease-in-out delay-50 text-sky-500 text-lg font-bold mb-2"
+                >
+                  All-in-One Content Toolkit
+                </h6>
+                <p class="text-white/70 text-sm">
+                  Our integrated creation tools - from editing to effects,
+                  publishing to analytics - help streamline your workflow
+                </p>
+              </div>
+            </div>
+            <div
+              class="cursor-pointer group border border-slate-700 transition ease-in-out delay-50 hover:bg-slate-900 backdrop-blur-md rounded overflow-hidden"
+            >
+              <div class="h-32">
+                <img
+                  src="images/animated_illustration_coins_and_cash_growing_from_di_6e1161af-86bf-47e9-910f-4321a26dd8f1.png"
+                  class="object-cover aspect-square w-full h-full"
+                />
+              </div>
+
+              <div class="p-4">
+                <h6
+                  class="transition ease-in-out delay-50 text-yellow-300 text-lg font-bold mb-2"
+                >
+                  Subscription Services & Commerce
+                </h6>
+                <p class="text-white/70 text-sm">
+                  Monetize content, offer exclusive access, and sell merchandise
+                  seamlessly. Memberships are frictionless for fans globally.
+                </p>
+              </div>
+            </div>
+            <div
+              class="cursor-pointer group border border-slate-700 transition ease-in-out delay-50 hover:bg-slate-900 backdrop-blur-md rounded overflow-hidden"
+            >
+              <div class="h-32">
+                <img
+                  src="images/illustration_creator_smiles_looking_at_data_visualiz_42f41e9f-a650-4c5b-b0e4-f7e8ff627060.png"
+                  class="object-cover aspect-square w-full h-full"
+                />
+              </div>
+
+              <div class="p-4">
+                <h6
+                  class="transition ease-in-out delay-50 text-red-300 text-lg font-bold mb-2"
+                >
+                  Sustainable Career Building
+                </h6>
+                <p class="text-white/70 text-sm">
+                  Thrive long-term with our accelerated Network Program for
+                  ambitious creators invested in digital content careers.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </section>
+
+      <!-- JOIN NOW -->
+      <div
+        class="bg-slate-950"
+        hx-get="/partials/join-now.html"
+        hx-trigger="load"
+      ></div>
+    </div>
+  </body>
 </html>

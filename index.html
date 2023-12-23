@@ -1,41 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Digitalage</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Digitalage | Reinvent Social Media Technology For Good</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
-    <link rel="manifest" href="/icons/site.webmanifest">
-    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/icons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#ffc40d">
-    <meta name="msapplication-TileImage" content="/icons/mstile-144x144.png">
-    <meta name="msapplication-config" content="/icons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css"
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/icons/site.webmanifest" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="shortcut icon" href="/icons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#ffc40d" />
+    <meta name="msapplication-TileImage" content="/icons/mstile-144x144.png" />
+    <meta name="msapplication-config" content="/icons/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css"
     />
 
     <!--    <script src="https://cdn.tailwindcss.com"></script>-->
     <script src="scripts/tailwind3.3.5.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" integrity="sha256-yPqP9Fer3NIS83oH7y8pLJmQEd/6vKpXf7Hh4Adsplg=" crossorigin="anonymous" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/htmx.org@1.9.9/dist/htmx.min.js" integrity="sha256-lqM0qVcKOCz5xhofhtVYcLocZeFmzFvK6Y3djNq+uIY=" crossorigin="anonymous"></script>
-</head>
-<body class="bg-gray-900">
+    <script>
+      console.log(window.location.pathname);
+    </script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"
+      integrity="sha256-yPqP9Fer3NIS83oH7y8pLJmQEd/6vKpXf7Hh4Adsplg="
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/htmx.org@1.9.9/dist/htmx.min.js"
+      integrity="sha256-lqM0qVcKOCz5xhofhtVYcLocZeFmzFvK6Y3djNq+uIY="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-gray-900">
+    <div
+      x-data="{ hasBackground: false, isDark: true, button: 'Join Digitalage Now' }"
+    >
+      <!-- HEADER -->
+      <div hx-get="/partials/header.html" hx-trigger="load"></div>
 
-<div x-data="{ hasBackground: false, isDark: true }" >
-    <!-- HEADER -->
-    <div hx-get="/partials/header.html" hx-trigger="load"></div>
-    <!-- Router -->
-    <div hx-get="/home.html" hx-trigger="load" id="root"></div>
-</div>
+      <!-- Router -->
+      <div hx-get="/partials/banner.html" hx-trigger="load"></div>
+      <div
+        class="w-full h-1"
+        x-intersect:leave.margin.-64px="isDark = false"
+        x-intersect:enter.margin.-64px="isDark = true"
+      ></div>
+      <section class="bg-white">
+        <div class="px-8 py-12 max-w-[768px] m-auto">
+          <img
+            src="images/flat_illustration_breaking_down_account_management_o_8cd7c17f-3b5e-45f5-a42b-44066c55575e.png"
+          />
+          <p class="py-8 flex flex-col lg:flex-row gap-6">
+            <span class="text-2xl font-bold block"
+              >We are reimagining social technology to put
+              <span class="italic text-sky-600">control back</span> into the
+              hands of users</span
+            >
+            <span class="text-lg text-gray-600"
+              >Our platform is designed to provide transparency, ensure content
+              integrity, foster meaningful connections, and enable equitable
+              compensation.</span
+            >
+          </p>
+        </div>
+      </section>
+      <div
+        class="w-full h-1"
+        x-intersect:leave.margin.-64px="isDark = true"
+        x-intersect:enter.margin.-64px="isDark = false"
+      ></div>
 
-</body>
+      <section
+        class="bg-slate-950 py-4"
+        x-data="{ data: [
+        {
+            image: 'digital_painting_a_group_of_young_professionals_dive_ad1e12a5-8c45-47d6-b665-560e376fb41f.png',
+            title: 'User-Centric Design',
+            description: 'Our interface and algorithms are built to serve user needs - not exploit them. We enable authentic connections without manipulating recommendations or compromising privacy.',
+            color: 'yellow'
+        },
+        {
+            image: 'illustration_floating_interface_screens_people_inter_5da1c4c5-4e9b-42df-9cce-eaa6e4469c54.png',
+            title: 'Creator Economy',
+            description: 'We offer creators unmatched opportunities to monetize content while retaining rights. Our fair compensation models empower sustainable creator careers.',
+            color: 'red'
+        },
+        {
+            image: 'network_interconnected_pieces_authentic_verified_con_ac462519-f3f7-4d2a-b3db-db60ed4fb060.png',
+            title: 'Decentralized Architecture',
+            description: 'Our decentralized platform powered by blockchain ensures security, transparency and gives users control over their data.',
+            color: 'sky'
+        },
+        {
+            image: 'illustration_creators_conceptualizing_ideas_on_devic_76ac6f73-b25e-4826-9441-6660f8f54d06.png',
+            title: 'Content Authenticity',
+            description: 'We leverage advanced analytics to authenticate content, counter disinformation, and promote accurate information across the platform.',
+            color: 'purple'
+        }
+    ] }"
+      >
+        <h4
+          class="text-center text-slate-300 text-4xl mt-4 font-extrabold px-4"
+        >
+          The Digitalage Difference
+        </h4>
+
+        <div class="grid md:grid-cols-2 gap-4 px-8 py-12 max-w-5xl m-auto">
+          <template x-for="(card, index) in data" :key="index">
+            <div
+              :class="'hover:border-' + card.color + '-500'"
+              class="cursor-pointer group border border-slate-700 transition ease-in-out delay-50 hover:bg-slate-900 backdrop-blur-md rounded overflow-hidden"
+            >
+              <div class="h-48">
+                <img
+                  :src="'images/' + card.image"
+                  class="object-cover aspect-square w-full h-full"
+                />
+              </div>
+
+              <div class="p-6">
+                <h6
+                  :class="'group-hover:text-' + card.color + '-400'"
+                  class="transition ease-in-out delay-50 text-white/60 text-2xl font-bold mb-4"
+                  x-text="card.title"
+                ></h6>
+                <p class="text-white/40" x-text="card.description"></p>
+              </div>
+            </div>
+          </template>
+        </div>
+      </section>
+      <!-- JOIN NOW -->
+      <div hx-get="/partials/join-now.html" hx-trigger="load"></div>
+    </div>
+  </body>
 </html>
